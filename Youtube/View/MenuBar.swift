@@ -56,6 +56,7 @@ class MenuBar: UIView, UICollectionViewDataSource,UICollectionViewDelegate,UICol
 
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
 //        let x = CGFloat(indexPath.item) * frame.width / 4
 //        horizontalBarLeftAnchorConstraint?.constant = x
 //
@@ -80,8 +81,7 @@ class MenuBar: UIView, UICollectionViewDataSource,UICollectionViewDelegate,UICol
         return CGSize(width: frame.width / 4, height: frame.height)
     }
     
-    
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }

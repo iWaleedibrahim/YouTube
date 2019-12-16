@@ -8,6 +8,12 @@
 
 import UIKit
 
-class SubscriptionCell: BaseCell {
+class SubscriptionCell: FeedCell {
     
+    override func fetchVideos() {
+        ApiService.sharedInstance.fetchsubscriptionFeed{ (videos) in
+            self.videos = videos
+            self.collectionView.reloadData()
+        }
+    }
 }

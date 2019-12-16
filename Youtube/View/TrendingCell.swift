@@ -8,6 +8,15 @@
 
 import UIKit
 
-class TrendingCell: BaseCell {
-    
+class TrendingCell: FeedCell {
+    override func fetchVideos() {
+        ApiService.sharedInstance.fetchTrendingFeed { (videos) in
+            self.videos = videos
+            self.collectionView.reloadData()
+            print("The Self Variable is\(self)")
+        }
+    }
 }
+
+
+
